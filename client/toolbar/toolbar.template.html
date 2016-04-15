@@ -1,0 +1,26 @@
+<md-toolbar class="md-hue-2">
+  <div class="md-toolbar-tools">
+    <h2>
+      <span ui-sref="home">AngularJS Auth0</span>
+    </h2>
+    <span flex></span>
+    <md-button
+      aria-label="Login"
+      ng-if="!toolbar.auth.isAuthenticated"
+      ng-click="toolbar.login()">
+      Login
+    </md-button>
+    <md-button
+      ui-sref="profile"
+      aria-label="Profile"
+      ng-if="toolbar.auth.isAuthenticated">
+      Profile
+    </md-button>
+    <md-button
+      aria-label="Logout"
+      ng-if="toolbar.auth.isAuthenticated"
+      ng-click="toolbar.logout()">
+      Logout
+    </md-button>
+  </div>
+</md-toolbar>
